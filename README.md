@@ -11,16 +11,33 @@ Aprenda e domine a linguagem padrão para trabalho com Banco de Dados! Curso TOT
 - date (data)
 - boolean (boleano) (lógico - verdadeiro ou falso)
 
-### Comando para criar tabela
+## Comandos para definição de estrutura em tabela (DDL)
+
+### Cria tabela
 - CREATE TABLE nome_da_tabela (campo tipo_de_dados); - Cria tabela
-### Comando para deletar tabela
+### Deleta tabela
 - DROP TABLE nome_da_tabela; - Deleta tabela
-### Comandos para alterar tabela
+### Altera tabela
 - ALTER TABLE nome_da_tabela rename to novo_nome_da_tabela; - Altera o nome da tabela 
 - ALTER TABLE nome_da_tabela add nome_da_coluna tipo_de_dados; - Inclui uma coluna numa tabela já anteriormente criada
+
+## Comandos para manipulação de dados em tabela (DML)
+
+### Insere 
+- INSERT INTO nome_da_tabela (campo(s)_que_receberão_dados) VALUES (valores_digitados_na_ordem_das_colunas_anteriores);
+
+### Exibe 
+- SELECT * (todos_campos) FROM nome_da_tabela; 
+- SELECT nome(s)_do(s)_campo(s) FROM nome_da_tabela;
+
+### Exclui 
+
+### Atualiza 
+
 
 ## Comandos sqlite
 - sqlite3 nome_do_banco.sqlite - Cria banco de dados
 - .tables - Lista tabelas criadas no banco 
 - .schema - Exibe a estrutura de todas as tabelas criadas
 - .schema nome_tabela - Exibe a estrutura da tabela especificada
+- .headers on - Habilita a exibição das colunas quando for feito um select 
