@@ -30,7 +30,12 @@ Aprenda e domine a linguagem padrão para trabalho com Banco de Dados! Curso TOT
 - SELECT * (todos_campos) FROM nome_da_tabela; 
 - SELECT nome(s)_do(s)_campo(s) FROM nome_da_tabela;
 
+#### Com restrições:
+- SELECT * (todos os campos (não todos os registros)) FROM nome_da_tabela WHERE algum_campo = dado_de_algum_registro;
+- SELECT * FROM nome_da_tabela WHERE nome like "M%"; % desconsidera os caracteres após ele e exibe todos os registros que possuem a restrição especificada 
+
 ### Exclui 
+- DELETE from nome_da_tabela WHERE algum_campo = dado_de_algum_registro;
 
 ### Atualiza 
 
