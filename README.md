@@ -15,6 +15,7 @@ Aprenda e domine a linguagem padrão para trabalho com Banco de Dados! Curso TOT
 - CREATE TABLE nome_da_tabela (campo tipo_de_dados); - Cria tabela
 - DROP TABLE nome_da_tabela; - Deleta tabela
 - ALTER TABLE nome_da_tabela rename to novo_nome_da_tabela; - Altera o nome da tabela 
+- ALTER TABLE nome_da_tabela add nome_da_coluna tipo_de_dados; - Inclui uma coluna numa tabela já anteriormente criada
 
 ## Comandos sqlite
 - sqlite3 nome_do_banco.sqlite - Cria banco de dados
