@@ -1,0 +1,37 @@
+-- **** LISTAR NOME DO LIBRO E O NOME DO AUTOR!!!
+
+SELECT l.titulo, a.nome
+FROM livro l, autor a
+WHERE l.autor_id = a.id;
+
+-- **** LISTAR NOME DO LIBRO E O NOME DA EDITORA!!!
+
+SELECT l.titulo, e.nome
+FROM livro l, editora e
+WHERE e.id = l.editora_id;
+
+INSERT INTO editora (id, nome, cidade, estado, telefone, email)
+VALUES (1, "Companhia das Letras", "São Paulo", "SP", "11 3703-3500", "companhiadasletras@companhiadasletras.com.br");
+
+SELECT l.titulo, a.nome, e.nome, e.telefone
+FROM livro l, autor a, editora e
+WHERE a.id = l.autor_id
+AND e.id = l.editora_id
+AND e.telefone like "11%";
+
+SELECT l.titulo, e.nome, e.estado, e.telefone
+FROM livro l, editora e
+WHERE e.id = l.editora_id
+AND e.estado = "SP";
+
+SELECT l.titulo, a.nome, e.nome
+FROM livro l, autor a, editora e
+WHERE a.id = l.autor_id
+AND e.id = l.editora_id;
+
+--só retorna dados que tenham correspondência entre as 3 tabelas
+--ao add um autor com id 2, e ordar o select de 3 joins, apareceu o resultado com id 2 (que antes não existia na tabela autor e nao aparecia devido a isso)
+
+insert into autor (id, nome)
+values (2, "Chuck Palahniuk");
+
