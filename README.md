@@ -57,6 +57,32 @@ Campo que torna um registro único. Um campo, código, se for restringido como s
 ### Chave estrangeira: 
 Ligação de um campo (código do autor) de uma tabela (livros) à chave primaria (codigo) de outra tabela (autores). 
 
+### Como resolver problemas envolvendo várias tabelas?
+- Atenção a pergunta que precisa ser respondida!!! "Como exibir uma lista com o nome do livro e o nome do autor?"
+- Em quais tabelas estão as repostas? livro e autor
+- Como essas tabelas se ligam? Quais campos conectam uma tabela a outra? (autor_id (livro)(chave estrangeita) e id (autor)(chave primária))
+
+### Como fazer JOIN?
+- SELECT * 
+FROM nome_da_tabela_que_contem_a_primeira_info apelido_tabela, nome_da_tabela_que_contem_a_segunda_info apelido_tabela
+WHERE apelido_tabela.campo_chave_primaria = apelido_tabela.campo_chave_estrangeira;
+
+#### Entre duas tabelas
+SELECT l.titulo, a.nome
+FROM autor a, livro l
+WHERE a.id = l.autor_id;
+
+SELECT l.titulo, e.nome
+FROM livro l, editora e
+WHERE e.id = l.editora_id;
+
+#### Entre três tabelas
+
+SELECT l.titulo, a.nome, e.nome
+FROM livro l, autor a, editora e
+WHERE a.id = l.autor_id
+AND e.id = l.editora_id;
+
 ### Convenções/Regras para o relacionamento entre tabelas
 - Nome da tabela deverá ser escrito no singular (livro, autor, estilo)
 - Chave primária deverá ser nomeada como id
