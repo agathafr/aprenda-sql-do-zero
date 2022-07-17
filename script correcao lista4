@@ -1,0 +1,153 @@
+-- 1) Selecione somente o nome e salário dos funcionários.
+select nome, salario
+from funcionarios;
+
+-- 2) Selecione somente o nome e telefone dos funcionários.
+select nome, telefone
+from funcionarios;
+
+-- 3) Selecione somente o nome, rg e cpf dos funcionários.
+select nome,rg, cpf
+from funcionarios;
+
+-- 4) Selecione somente o nome e a cidade dos funcionários.
+select nome, cidade
+from funcionarios;
+
+-- 5) Insira mais um funcionário.
+insert into funcionarios (nome, cidade, cpf, telefone)
+values ("Pedro", "Itú", "123.456.789-88", "12 9878-9878");
+
+-- 6) Exiba todos os dados dos funcionários.
+select * from funcionarios;
+
+-- 7) Crie a tabela fornecedores contendo os campos nome, endereço, telefone, cidade, estado, cep, cnpj
+-- e email. Coloque os tipos de dados necessários.
+CREATE TABLE fornecedores (
+codigo int,
+nome text, 
+endereco text, 
+telefone text,
+cidade text,
+estado text,
+cep text,
+cnpj text,
+email text);
+
+-- 8) Insira 2 fornecedores. Código 1 e Código 2
+INSERT INTO fornecedores (codigo, nome, telefone, cidade)
+VALUES (1, "ABC Comércio", "33 3333-3333", "São Roque");
+
+INSERT INTO fornecedores (codigo, nome, telefone, cidade)
+VALUES (1, "XYZ Comércio", "33 2222-3333", "São Roque");
+
+-- 9) Selecione o nome e o telefone dos fornecedores.
+SELECT nome, telefone
+FROM fornecedores;
+
+-- 10) Agora iremos aprender uma opção do comando select. Nós podemos restringir o que vai ser exibido
+-- na tela. É moleza. Por exemplo se eu quiser listar somente o aluno de código 2 o comando fica assim: select *
+-- from alunos where codigo = 2; - Nós apenas adicionamos o WHERE e a CONDIÇÃO. Veja que mantivemos o *
+-- para exibir todos os campos, mas poderíamos também exibir somente o nome do aluno 2 assim: select nome
+-- from alunos where codigo = 2; - EXPERIMENTE AGORA ESSES 2 COMANDOS.
+select *
+from alunos where codigo = 2;
+
+select nome
+from alunos where codigo = 2;
+
+-- 11) Selecione o funcionário de código 3.
+
+SELECT nome
+FROM funcionarios
+WHERE codigo = 3;
+
+-- 12) Selecione o fornecedor de código 1.
+
+SELECT nome
+FROM fornecedores
+WHERE codigo = 1;
+
+-- 13) Selecione o aluno de código 2.
+
+SELECT nome
+FROM alunos
+WHERE codigo = 2;
+
+-- 14) Selecione o funcionário de código 1.
+
+SELECT *
+FROM funcionarios
+WHERE codigo = 1;
+
+-- 15) Selecione somente o nome e salário do funcionário de código 2.
+
+SELECT nome, salario
+FROM funcionarios
+WHERE codigo = 2;
+
+-- 16) Selecione somente o nome a cidade do aluno de código 1.
+
+SELECT nome, cidade
+FROM alunos
+WHERE codigo = 1;
+
+-- 17) Selecione todos os funcionários de MG. É assim: select * from funcionários where estado=’MG’; -
+-- Como estado é texto eu usei aspas! – Faça isso agora!
+select * from funcionários where estado="MG";
+
+-- 18) Selecione todos os funcionários de GO.
+SELECT * 
+FROM funcionarios
+WHERE estado = "GO";
+
+-- 19) Selecione todos os funcionários de SP.
+SELECT * 
+FROM funcionarios
+WHERE estado = "SP";
+
+-- 20) Insira um funcionário para SP.
+
+INSERT INTO funcionarios (nome, cidade, estado)
+VALUES ("Maria", "São Paulo", "SP");
+
+-- 21) Selecione todos os funcionários de SP.
+SELECT * 
+FROM funcionarios
+WHERE estado = "SP";
+
+-- 22) Crie a tabela livros contendo o campo código, nome, categoria, resumo, precocusto, precovenda.
+CREATE TABLE livros (
+codigo int,
+nome text, 
+categoria text,
+resumo text, 
+precocusto number,
+precovenda number);
+
+-- 23) Verifique o esquema .schema da tabela livros.
+
+-- 24) Liste as tabelas existentes.
+
+-- 25) Insira 1 livro.
+INSERT INTO livros (codigo, nome, precocusto)
+VALUES (1, "A arte da Guerra", 6);
+
+-- 26) Selecione o nome e a categoria do livro de código 1.
+SELECT  nome, categoria
+FROM livros
+WHERE codigo = 1;
+
+-- 27) Selecione o nome e a categoria do livro de código 3.
+SELECT  nome, categoria
+FROM livros
+WHERE codigo = 3;
+
+-- 28) Exclua a tabela livros.
+DROP TABLE livros;
+
+-- 29) Altere o nome da tabela aluno para estudantes.
+ALTER TABLE alunos rename to estudantes;
+-- 30) Altere a tabela alunos inserindo o campo estado. Se estiver com dúvidas consulte a primeira lista de
+-- exercícios.
+ALTER TABLE estudantes add estado text;
