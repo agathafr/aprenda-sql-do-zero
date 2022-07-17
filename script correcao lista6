@@ -1,0 +1,88 @@
+-- 1) Abra no SQLite Studio o banco de dados com o controle de livros que desenvolvemos.
+
+-- 2) Selecione o nome e o estilo de todos os livros
+SELECT l.titulo, e.nome
+FROM livro l, estilo e
+WHERE e.id = l.estilo_id;
+
+-- 3) Selecione o nome e a editora de todos os livros
+SELECT l.titulo, e.nome
+FROM livro l, editora e
+WHERE e.id = l.editora_id;
+
+-- 4) Selecione o nome e o autor de todos os livros
+SELECT l.titulo, a.nome
+FROM livro l, autor a
+WHERE a.id = l.autor_id;
+
+-- 5) Selecione o nome e o estilo de todos os livros que começam por “A”
+SELECT l.titulo, e.nome
+FROM livro l, estilo e
+WHERE e.id = l.estilo_id
+AND l.titulo like "A%";
+
+-- 6) Selecione o nome e o estilo de todos os livros que cujo estilo comece por “R”
+SELECT l.titulo, e.nome
+FROM livro l, estilo e
+WHERE e.id = l.estilo_id 
+AND l.titulo like "R%";
+
+-- 7) Selecione o nome do autor, da editora, do estilo e do livro de todos os livros de autores cujo nome
+-- comece por D.
+SELECT a.nome [Nome do Autor], e.nome [Nome da editora], es.nome [Nome do estilo], l.titulo
+FROM autor a, editora e, estilo es, livro l
+WHERE a.id = l.autor_id 
+AND e.id = l.editora_id
+AND es.id = l.estilo_id
+AND a.nome like "C%";
+
+-- 8) Selecione o nome do autor, da editora, do estilo e do livro de todos os livros de editoras paulistas.
+SELECT a.nome [Nome do Autor], e.nome [Nome da editora], es.nome [Nome do estilo], l.titulo
+FROM autor a, editora e, estilo es, livro l
+WHERE a.id = l.autor_id
+AND e.id = l.editora_id
+AND es.id = l.estilo_id
+AND e.estado = "SP";
+
+-- 9) Atualize o autor do livro de id 1 para autor_id 2.
+UPDATE autor
+SET autor_id = 2
+WHERE id = 1;
+
+UPDATE autor
+SET id = 1
+WHERE nome = "Jostein Gaarder";
+
+-- 10) Atualize o telefone da editora de id 3 para 44 6666-6666
+UPDATE editora
+SET telefone = "44 6666-6666"
+WHERE id = 3;
+
+-- 11) Atualize o nome do autor 8 para “Graciliano Ramos”
+UPDATE autor
+SET nome = "Graciliano Ramos"
+WHERE id = 8;
+
+-- 12) Atualize o estilo 5 para Fantasia.
+UPDATE estilo
+SET nome = "Fantasia"
+WHERE id = 5;
+
+-- 13) Selecione o nome do livro e do estilo de todas as editoras de SP.
+SELECT l.titulo, es.nome
+FROM livro l, estilo es, editora e
+WHERE es.id = l.estilo_id
+AND e.id = l.editora_id
+AND e.estado = "SP";
+
+-- 14) Selecione o nome do livro e da Editora de todas as editoras de SP.
+SELECT l.titulo, e.nome
+FROM livro l, editora e
+WHERE e.id = l.editora_id
+AND e.estado = "SP";
+
+-- 15) Selecione o nome do livro e do autor de em ordem alfabética por autor.
+SELECT l.titulo, a.nome
+FROM livro l, autor a
+WHERE a.id = l.autor_id
+ORDER BY a.nome;
