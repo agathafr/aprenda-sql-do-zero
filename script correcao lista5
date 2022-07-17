@@ -1,0 +1,165 @@
+-- 1) Crie no SqliteStudio um banco de dados chamado lista5.sqlite e execute os comandos abaixo.
+
+-- 2) Crie uma tabela com o nome de livros contendo os campos codigo, titulo, codigo do autor, código da
+-- editora, código do estilo, sinopse e isbn. Sugestão de nome de campo: autor_codigo, editora_codigo
+CREATE TABLE livro (
+id int,
+titulo text int,
+autor_id int,
+editora_id int,
+estilo_id int,
+sinopse text,
+isbn text);
+
+-- 3) Crie uma tabela com o nome de editoras contendo o codigo, nome, cidade, estado, telefone e e-mail.
+CREATE TABLE editora (
+id int,
+nome text,
+cidade text, 
+estado text, 
+telefone text,
+email text);
+
+-- 4) Crie uma tabela com o nome de estilos contendo o código e o nome do estilo.
+CREATE TABLE estilo (
+id int,
+nome text);
+
+-- 5) Crie uma tabela com o nome de autores contendo o codigo, nome, cidade, estado, telefone do autor.
+CREATE TABLE autor (
+id int,
+nome text,
+cidade text,
+estado text,
+telefone text);
+
+-- 6) Insira um registro na tabela livros (todos os campos)
+INSERT INTO livro (id, titulo, autor_id, editora_id, estilo_id, sinopse, isbn)
+VALUES (1, "O Mundo de Sofia", 1, 1, 1, "Uma adolescente começa a receber cartas anônimas nas vésperas de seu aniversário", 9780374266424);
+
+-- 7) Insira um registro na tabela editoras (todos os campos).
+INSERT INTO editora (id, nome, cidade, estado, telefone, email)
+VALUES (1, "Companhia das Letras", "São Paulo", "SP", "11 3703-3500", "companhiadasletras@companhiadasletras.com.br");
+
+-- 8) Insira um registro na tabela estilos (todos os campos).
+INSERT INTO estilo (id, nome)
+VALUES (1, "Romance Filosófico");
+
+-- 9) Insira um registro na tabela autores (todos os campos).
+INSERT INTO autor (id, nome, cidade, estado, telefone)
+VALUES (1, "Jostein Gaarder", "Oslo", "nda", "00 0000-0000");
+
+-- 10) Altere o nome da tabela autores para autor.
+
+-- 11) Insira na tabela livros um novo registro adicionando somente os campos codigo e nome
+INSERT INTO livro (id, titulo)
+VALUES (2, "Assombro");
+
+-- 12) Insira 5 estilos de livros (comédia, drama, ficção, suspense, romance).
+INSERT INTO estilo (id, nome) values (2, "Comédia");
+INSERT INTO estilo (id, nome) values (3, "Drama");
+INSERT INTO estilo (id, nome) values (4, "Ficcção");
+INSERT INTO estilo (id, nome) values (5, "Suspense");
+INSERT INTO estilo (id, nome) values (6, "Romance");
+
+INSERT INTO livro (id, titulo, autor_id, editora_id, estilo_id, sinopse, isbn)
+VALUES (2, "Será que isso presta?", 2, 2, 2, "Reúne melhores textos da carreira do comediante", 9786555601770);
+
+INSERT INTO livro (id, titulo, autor_id, editora_id, estilo_id, sinopse, isbn)
+VALUES (3, "Auto da Compadecida", 3, 3, 3, "Drama do Nordeste Brasileiro, mescla tradição da literatura de corde, comédia, traços do barroco católico", 9788520937822);
+
+INSERT INTO livro (id, titulo, autor_id, editora_id, estilo_id, sinopse, isbn)
+VALUES (4, "Fahrenheit 451", 4, 4, 4, "Bombeiros queimam livros", 9780345342966);
+
+INSERT INTO livro (id, titulo, autor_id, editora_id, estilo_id, sinopse, isbn)
+VALUES (5, "Os Homens que Não Amavam as Mulheres", 5, 5, 5, "Jornalista e hacker contratados para desvendar o desaparecimento de uma jovem", 9780143177289);
+
+INSERT INTO livro (id, titulo, autor_id, editora_id, estilo_id, sinopse, isbn)
+VALUES (6, "A Vida Invisível de Addie LaRue", 6, 6, 6, "Jovem faz barganha com o diabo e fica imortal", 9781785652509);
+
+-- 13) Selecionar todos os livros do banco de dados.
+
+SELECT *
+FROM livro;
+
+-- 14) Insira 2 novos livros.
+INSERT INTO livro (id, titulo, autor_id, editora_id, estilo_id, sinopse, isbn)
+VALUES (3, "Um estudo em vermelho", 3, 3, 3, "Watson e Sherlock viram parceiros e trabalham num caso muito curioso", 9781421808000);
+
+INSERT INTO livro (id, titulo, autor_id, editora_id, estilo_id, sinopse, isbn)
+VALUES (4, "O Sinal dos Quatro", 4, 4, 4, "Watson e Sherlock viram parceiros e trabalham num caso muito curioso", 9781421808000);
+
+-- 15) Altere o nome da tabela livros autores para livro.
+
+-- 16) DESAFIO: Selecione o nome de todos os estilos em ordem alfabética
+select titulo 
+from livro
+order by titulo;
+
+-- 17) DESAFIO: Selecione o nome de todos os autores em ordem alfabética inversa
+select titulo
+from livro
+order by titulo DESC;
+
+-- 18) Selecione o nome e o telefone de todas as editoras.
+select nome, telefone
+from editora;
+
+-- 19) Selecione o nome de todas as editoras
+select nome
+from editora;
+
+-- 20) Selecione o nome de todas as editoras de MG
+select nome
+from editora
+where estado = "mg";
+
+-- 21) Selecione os estilos de livros em ordem alfabética.
+select nome_estilo
+from estilo
+order by nome_estilo;
+
+-- 22) Selecione agora em ordem alfabética inversa.
+select nome_estilo
+from estilo
+order by nome_estilo DESC;
+
+-- 23) Selecione o nome de todos os autores de SP.
+select nome
+from autor
+where estado = "SP";
+
+-- 24) Selecione o estilo de código 13
+select *
+from estilo
+where id = 13;
+
+-- 25) Selecione o autor de código 8
+select nome
+from autor
+where id = 8;
+
+-- 26) Selecione a editora de código 10
+select nome
+from editora
+where id = 10;
+
+-- 27) Selecione o nome, a cidade e o estado de todas as editoras.
+select nome, cidade, estado
+from editora;
+
+-- 28) Adicione 3 editoras.
+INSERT INTO editora (id, nome, cidade, estado, telefone, email)
+VALUES (2, "LeYa", "Lisboa", "nda", "+351 21 427 22 73", "sac@leyabrasil.com.br");
+
+INSERT INTO editora (id, nome, cidade, estado, telefone, email)
+VALUES (3, "Intrínseca", "Rio de Janeiro", "RJ", "55 21 3206-7400", "contato@intrinseca.com.br");
+
+INSERT INTO editora (id, nome, cidade, estado, telefone, email)
+VALUES (4, "Arqueiro", "São Paulo", "SP", "(11) 3868-4492", "ATENDIMENTO@EDITORAARQUEIRO.COM.BR");
+
+-- 29) Selecione o nome de todas as editoras
+select * from editora;
+
+-- 30) Exclua a editora de código 1
+delete from editora where id = 1;
