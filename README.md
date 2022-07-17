@@ -44,6 +44,9 @@ Aprenda e domine a linguagem padrão para trabalho com Banco de Dados! Curso TOT
 - DELETE from nome_da_tabela WHERE algum_campo = dado_de_algum_registro;
 
 ### Atualiza 
+- UPDATE nome_da_tabela
+SET campo_a_ser_atualizado = novo_valor_do_registro
+WHERE campo_que_guarda_o_valor_que_identifica_o_registro_a_ser_atualizado_unicamente = valor_que_identifica_o_campo_exclusivamente
 
 ## Ligações
 Para evitar redundância ou perda de dados por erro no cadastro, são criadas tabelas individuais onde o dado é escrito somente uma vez e identificado com um código único (chave primária). O código único pode ser referenciado por outras tabelas que necessitem do dado que o código identifica exclusivamente. Dessa forma, evita-se que seja necessário cadastrar uma mesma informação várias vezes. Como exemplo, numa tabela livros, não será necessário escrever num campo "autor" o nome dele caso exista uma tabela "autores" que possua o nome do autor e um código que identifique ele unicamente. Nesse cenário, é possível, na tabela livros, usar o campo "código do autor" e criar um relacionamento entre as tabelas livros e autores. Onde nesse relacionamento o campo "codigo do autor" na tabela livros é uma chave estrangeira já que está ligado ao campo codigo (chave primária) da tabela "autores"
