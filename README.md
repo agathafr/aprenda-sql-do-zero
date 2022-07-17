@@ -34,6 +34,10 @@ Aprenda e domine a linguagem padrão para trabalho com Banco de Dados! Curso TOT
 - SELECT * (todos os campos (não todos os registros)) FROM nome_da_tabela WHERE algum_campo = dado_de_algum_registro;
 - SELECT * FROM nome_da_tabela WHERE nome like "M%"; % desconsidera os caracteres após ele e exibe todos os registros que possuem a restrição especificada 
 
+### Com ordenação:
+- SELECT * FROM nome_da_tabela ORDER BY coluna_a_ser_ordenada ASC;
+- SELECT * FROM nome_da_tabela ORDER BY coluna_a_ser_ordenada DESC;
+
 ### Exclui 
 - DELETE from nome_da_tabela WHERE algum_campo = dado_de_algum_registro;
 
