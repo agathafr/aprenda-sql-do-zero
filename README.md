@@ -33,6 +33,8 @@ Aprenda e domine a linguagem padrão para trabalho com Banco de Dados! Curso TOT
 #### Com restrições:
 - SELECT * (todos os campos (não todos os registros)) FROM nome_da_tabela WHERE algum_campo = dado_de_algum_registro;
 - SELECT * FROM nome_da_tabela WHERE nome like "M%"; % desconsidera os caracteres após ele e exibe todos os registros que possuem a restrição especificada 
+- SELECT * FROM nome_da_tabela WHERE algum_campo = 50 or algum_campo = 4 or algum_campo = 7; 
+- SELECT * FROM nome_da_tabela WHERE algum_campo in (50, 2, 7, 900, 4); retorna os registros que possuem os dados dentro do intervalo especificado entre ()
 
 #### Com ordenação:
 - SELECT * FROM nome_da_tabela ORDER BY coluna_a_ser_ordenada ASC;
