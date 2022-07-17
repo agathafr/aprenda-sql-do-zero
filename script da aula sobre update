@@ -1,0 +1,15 @@
+select * from autor;
+
+UPDATE autor
+SET telefone = "+1 00 3487-9876"
+WHERE ID = 1;
+
+select * from editora;
+
+UPDATE editora
+SET cidade = "São José do Rio Preto"
+WHERE id = 2;
+
+UPDATE editora
+SET estado = "SP"
+WHERE id = 2;
