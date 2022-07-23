@@ -1,0 +1,72 @@
+-- 1) Conte o número de editoras cadastradas
+select count(id)
+from editora;
+
+-- 2) Calcule a média do preço de venda dos livros
+select avg(precovenda)
+from livro;
+
+-- 3) Atualize o preço de venda do livro 1 aumentando seu valor em 7%
+update livro
+set precovenda = precovenda + (precovenda * 0.07)
+where id = 1;
+
+-- 4) Conte a quantidade de editoras de MG.
+select count(*)
+from editora
+where estado = "MG";
+
+-- 5) Conte o número de editoras agrupando por estado.
+select count(*)
+from editora
+group by estado;
+
+-- 6) Diminua o preço de todos os livros da editora 1 em 19%.
+update editora
+set precovenda = precovenda - (precovenda * 0.19)
+where editora_id = 1;
+
+-- 7) Qual o maior código de autor cadastrado?
+select max(id)
+from autor;
+
+-- 8) Qual o menor código de autor cadastrado?
+select min(id)
+from autor;
+
+-- 9) Conte o número de editoras, agrupando por estado e somente para estados que tenham 40 ou mais editoras.
+select count(*)
+from editora
+where estado = "MG"
+having count(*) >= 40;
+
+-- 10) Aumente o preço de todos os livros em 7,5%
+update livro
+set precovenda = precovenda + (precovenda * 0.075);
+
+-- 11) Exclua todas as editoras do estado DF.
+delete from editora
+where estado = "DF";
+
+-- 12) Os livros podem ser vendidos em 3 parcelas sendo a primeira parcela 30% do valor do livro e a segunda
+-- e terceira sendo 35% cada. Faça um select que mostre o nome do livro juntamente com o preço dele
+-- e os valor das parcelas.
+select titulo, precovenda,
+precovenda * 0.3 parcela1,
+precovenda * 0.35 parcela2,
+precovenda * 0.35 parcela3
+from livro;
+
+-- 13) Todas as editoras do DF mudaram para GO. Atualize no banco de dados por favor!
+update editora
+set estado = "GO"
+where estado = "DF";
+
+-- 14) Quantas editoras temos em cidades que começam pela letra M?
+select count(*)
+from editora
+where nome like "M%";
+
+-- 15) Altere o preço de todos os livros dando um desconto de 6%
+update livro
+set precovenda = precovenda - (precovenda * 0.06);
