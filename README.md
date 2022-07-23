@@ -106,6 +106,27 @@ FROM nome_da_tabela;
 SELECT min(nome_da_coluna)
 FROM nome_da_tabela;
 
+### Cláusulas GROUP BY e HAVING
+
+- GROUP BY
+Agrupa os registros de acordo com um critério
+
+Exemplo: 
+SELECT count(*)
+FROM editora
+GROUP BY estado;
+
+Retorna a quantidade de editores por estado
+
+- HAVING
+Restringe o resultado da consulta de acordo com o critério definido 
+
+SELECT estado, count(*) total
+FROM editora
+GROUP BY estado
+HAVING count(*) < 30;
+
+
 ## Comandos sqlite
 - sqlite3 nome_do_banco.sqlite - Cria banco de dados
 - .tables - Lista tabelas criadas no banco 
