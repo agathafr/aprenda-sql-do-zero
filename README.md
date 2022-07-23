@@ -90,8 +90,12 @@ AND e.id = l.editora_id;
 
 ### Função de agregação
 
-- Count
-SELECT count (*)
+- Count - contagem de registros
+SELECT count (*) Total
+FROM nome_da_tabela;
+
+- Avg - média aritmética
+SELECT avg(nome_do_campo) Media
 FROM nome_da_tabela;
 
 ## Comandos sqlite
