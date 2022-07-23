@@ -1,0 +1,25 @@
+--Qual o total de editoras cadastradas?
+select count(*)
+from editora;
+
+
+--Qual o total de editoras cadastradas em MG?
+select count(*)
+from editora
+where estado = "MG";
+
+--Qual a quantidade de editoras por estado?
+select count (*)
+from editora
+group by estado;
+
+select estado, count(*) total
+from editora
+group by estado;
+
+-- Quais estados têm menos de trinta editoras?
+
+select estado, count(*) total
+from editora
+group by estado
+having count(*) < 30;
