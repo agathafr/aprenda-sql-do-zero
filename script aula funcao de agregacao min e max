@@ -1,0 +1,11 @@
+-- Qual o maior valor encontrado na coluna () dentro da tabela x;
+select max(precovenda)
+from livro;
+
+--Qual o menor valor encontrado na coluna () dentro da tabela x;
+select min(precovenda)
+from  livro;
+
+--Qual o maior id?
+select max(id)
+from editora;
