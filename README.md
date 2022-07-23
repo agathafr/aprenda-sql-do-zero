@@ -88,6 +88,12 @@ AND e.id = l.editora_id;
 - Chave primária deverá ser nomeada como id
 - A chave estrangeira será nomeada como nometabelaaqualestaligada_id (autor_id, estilo_id)
 
+### Função de agregação
+
+- Count
+SELECT count (*)
+FROM nome_da_tabela;
+
 ## Comandos sqlite
 - sqlite3 nome_do_banco.sqlite - Cria banco de dados
 - .tables - Lista tabelas criadas no banco 
