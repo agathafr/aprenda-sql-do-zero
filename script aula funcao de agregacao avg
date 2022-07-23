@@ -1,0 +1,8 @@
+select * 
+from livro;
+
+-- Qual a média do preço de venda dos livros da tabela?
+-- Média arit = soma dos valores dos registros dividio pela quantidade de registros
+
+select avg(precovenda) Media
+from livro;
