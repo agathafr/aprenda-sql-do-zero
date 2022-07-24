@@ -62,7 +62,11 @@ Ligação de um campo (código do autor) de uma tabela (livros) à chave primari
 - Em quais tabelas estão as repostas? livro e autor
 - Como essas tabelas se ligam? Quais campos conectam uma tabela a outra? (autor_id (livro)(chave estrangeita) e id (autor)(chave primária))
 
-### Como fazer JOIN?
+### Como fazer INNER JOIN?
+
+INNER JOIN = LIGAÇÃO INTERNA
+Resultado mostra linhas que satisfaçam a condição nas duas tabelas (não trouxe campos nulos)
+
 - SELECT * 
 FROM nome_da_tabela_que_contem_a_primeira_info apelido_tabela, nome_da_tabela_que_contem_a_segunda_info apelido_tabela
 WHERE apelido_tabela.campo_chave_primaria = apelido_tabela.campo_chave_estrangeira;
@@ -87,6 +91,10 @@ AND e.id = l.editora_id;
 - Nome da tabela deverá ser escrito no singular (livro, autor, estilo)
 - Chave primária deverá ser nomeada como id
 - A chave estrangeira será nomeada como nometabelaaqualestaligada_id (autor_id, estilo_id)
+
+### OUTER JOIN
+
+OUTER JOIN = LEFT OUTER JOIN
 
 ### Função de agregação
 
