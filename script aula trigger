@@ -1,0 +1,30 @@
+-- Registrar na tabela de auditoria todos os cadastros de autores com a data
+
+-- Cria tabela de auditoria
+create table auditoria (autor_id int, data date, acao text);
+
+-- Deleta tabela de auditora
+drop table auditoria;
+
+-- Cria trigger auditoria
+CREATE TRIGGER auditoria AFTER INSERT ON autor
+BEGIN
+    INSERT INTO auditoria(autor_id, data, acao) 
+    VALUES (new.id, datetime('jul'), "Autor inserido");
+END;
+    
+-- Deleta trigger
+drop trigger auditoria2;
+
+-- Insere dado para teste
+insert into autor(id, nome) values (10, "Ana");
+
+-- Trigger que rastrei a exclusão de um dado
+CREATE TRIGGER auditoria2 AFTER DELETE ON autor
+BEGIN
+    INSERT INTO auditoria(autor_id, data, acao) VALUES (old.id, datetime('jul'), "Autor excluído");
+END;    
+
+-- Testando
+
+delete from autor where id = 10;
