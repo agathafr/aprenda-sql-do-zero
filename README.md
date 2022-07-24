@@ -212,6 +212,14 @@ where id = (
     where nome = "Graciliano Ramos"
 );
 
+### Transações do banco
+Conjunto de operações que podem ser confirmadas ou descartadas (Ou todas as operações são realizadas ou nenhuma é)
+
+begin transaction
+<br> insert into nome_tabela(campos) values (valores);
+<br> rollback; ou
+<br> commit;
+
 ## Comandos sqlite
 - sqlite3 nome_do_banco.sqlite - Cria banco de dados
 - .tables - Lista tabelas criadas no banco 
