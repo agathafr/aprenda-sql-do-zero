@@ -179,6 +179,40 @@ FROM livro
 ORDER BY precovenda DESC
 limit 2;
 
+### Subselects
+- É um Select dentro de outro Select
+- Usado quando há dependência de dados entre consultas distintas 
+- Pode ser uma alternativa ao join
+
+Exemplo:
+<br>
+- Exibe todos os livros do autor Dan Brown utilizando join
+
+select l.titulo
+from livro l, autor a
+WHERE a.id = l.autor_id
+AND a.nome = "Dan Brown";
+
+- Utilizando subselect
+
+select l.titulo 
+from livro l
+where l.autor_id = (
+    select id
+    from autor
+    where nome = "Dan Brown"
+);
+
+- Exclui todos os livros do autor "Graciliano Ramos"
+
+delete from livro
+where id = (
+    select id
+    from autor
+    where nome = "Graciliano Ramos"
+);
+
+
 ## Comandos sqlite
 - sqlite3 nome_do_banco.sqlite - Cria banco de dados
 - .tables - Lista tabelas criadas no banco 
