@@ -212,10 +212,47 @@ where id = (
     where nome = "Graciliano Ramos"
 );
 
-
 ## Comandos sqlite
 - sqlite3 nome_do_banco.sqlite - Cria banco de dados
 - .tables - Lista tabelas criadas no banco 
 - .schema - Exibe a estrutura de todas as tabelas criadas
 - .schema nome_tabela - Exibe a estrutura da tabela especificada
 - .headers on - Habilita a exibição das colunas quando for feito um select 
+
+### Funções
+
+- ifnull
+Mostra uma mensagem no registro de um campo ao invés de "null"
+
+- length
+Mostra o tamanho de uma string
+
+- lower
+Mostra uma string somente com letras minúsculas
+
+- upper
+Mostra  uma string somente com letras maiúsculas
+
+- substr(8, 3)
+Seleciona e mostra strings a partir de uma determinada posição.  O primeiro parâmetro representa a posição e o segundo a quantidade de strings que serão exibidas após a posição.
+
+- random()
+Gera números aletários
+
+- replace()
+Substitui um parâmetro por outro
+
+- round(x)
+Arredonda um valor decimal de acordo com a quantidade de casas passada no parâmetro
+
+- trim(), rtrim(), ltrim()
+Remove espaços do ínicio e do fim de uma string, do fim e do ínicio (reespectivamente)
+
+- typeoff
+Retorna o tipo de dado
+
+- date('now')
+Mostra a data atual
+
+- sqlite_version
+Mostra a versão do sqlite
