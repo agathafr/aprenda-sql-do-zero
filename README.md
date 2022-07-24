@@ -150,6 +150,21 @@ WHERE nome like "Z%";
 - É possível criar uma view a partir de uma view já existente
 - É possível fazer joins entre views
 
+### Index (Índice)
+
+#### Cria index
+
+CREATE INDEX idx_nome ON nome_tabela (nome_campo_muito_utilizado_em_consultas);
+
+#### Deleta index
+
+DROP INDEX idx_nome;
+
+- Acelera buscas em uma tabela 
+- Ao incluir e excluir dados, o índice precisa ser atualizado
+- Geralmente criado pelo DBA
+
+
 ## Comandos sqlite
 - sqlite3 nome_do_banco.sqlite - Cria banco de dados
 - .tables - Lista tabelas criadas no banco 
