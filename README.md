@@ -215,7 +215,7 @@ where id = (
 ### Transações do banco
 Conjunto de operações que podem ser confirmadas ou descartadas (Ou todas as operações são realizadas ou nenhuma é)
 
-begin transaction
+begin transaction;
 <br> insert into nome_tabela(campos) values (valores);
 <br> rollback; ou
 <br> commit;
