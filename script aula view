@@ -1,0 +1,36 @@
+-- 8) Selecione o nome do autor, da editora, do estilo e do livro de todos os livros de editoras paulistas.
+SELECT a.nome [Nome do Autor], e.nome [Nome da editora], es.nome [Nome do estilo], l.titulo
+FROM autor a, editora e, estilo es, livro l
+WHERE a.id = l.autor_id
+AND e.id = l.editora_id
+AND es.id = l.estilo_id
+AND e.estado = "SP";
+
+-- CRIAR UMA VIEW:
+CREATE VIEW SaoPaulo as
+SELECT a.nome [Nome do Autor], e.nome [Nome da editora], es.nome [Nome do estilo], l.titulo
+FROM autor a, editora e, estilo es, livro l
+WHERE a.id = l.autor_id
+AND e.id = l.editora_id
+AND es.id = l.estilo_id
+AND e.estado = "SP";
+
+select * from SaoPaulo;
+
+-- 3) Selecione o nome e a editora de todos os livros
+SELECT l.titulo, e.nome
+FROM livro l, editora e
+WHERE e.id = l.editora_id;
+
+CREATE VIEW livro_e_editora as
+SELECT l.titulo, e.nome
+FROM livro l, editora e
+WHERE e.id = l.editora_id;
+
+SELECT *
+FROM livro_e_editora
+WHERE nome like "Z%";
+
+DROP VIEW livro_e_editora;
+
+DROP VIEW SaoPaulo;
