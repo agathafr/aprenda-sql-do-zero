@@ -1,0 +1,12 @@
+select distinct estado from editora;
+
+select distinct cidade from editora;
+
+select * from autor;
+
+select * from editora limit 10;
+
+-- Quais os 2 livros mais caros da tabela?
+SELECT * from livro
+ORDER BY precovenda desc
+limit 2;
