@@ -96,6 +96,13 @@ AND e.id = l.editora_id;
 
 OUTER JOIN = LEFT OUTER JOIN
 
+### Trigger = Gatilho
+CREATE TRIGGER nome_trigger AFTER ou BEFORE INSERT ou UPDATE ou DELETE ON nome_tabela <br>
+BEGIN <br>
+    INSERT INTO auditoria(autor_id, data, acao) <br>
+    VALUES (new ou old.id. datetime('mes', "Dado Inserido); <br>
+END;    
+
 ### Função de agregação
 
 - Count - contagem de registros
