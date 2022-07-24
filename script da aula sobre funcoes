@@ -1,0 +1,56 @@
+-- ifnull
+select titulo, estilo_id
+from livro;
+
+select titulo, ifnull(estilo_id, "Falta código do estilo")
+from livro;
+
+-- length
+select length("Tiago") from livro where id = 1;
+select titulo, length(titulo) [Tamanho do título] 
+from livro 
+where id = 1;
+
+-- lower
+select lower(titulo)
+from livro
+where id = 1;
+
+-- upper
+select upper(titulo)
+from livro
+where id = 1;
+
+-- substr(x, y, z)
+select substr("Curso de SQL", 3, 3);
+
+--random
+select random();
+select titulo, substr(random(), 3, 3) as [codigo inventado]
+from livro;
+
+-- the replace (x, y, z)
+select replace("Curso de SQL", " ", "---");
+
+-- round(x)
+select titulo, precovenda from livro;
+select titulo, round(precovenda, 1) from livro;
+
+-- trim() _remove espaços do ínicio e do fim da string
+select trim("    Curso _    de    _ SQL    ");
+
+--rtrim()
+select rtrim("    Curso _    de    _ SQL    ");
+
+--ltrim()
+select ltrim("    Curso _    de    _ SQL    ");
+
+--typeoff()
+select typeof(1);
+select typeof(" ");
+
+-- date
+select date('now');
+
+-- sqlite_version
+select sqlite_version();
