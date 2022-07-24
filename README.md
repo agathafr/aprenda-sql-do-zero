@@ -126,6 +126,29 @@ FROM editora
 GROUP BY estado
 HAVING count(*) < 30;
 
+### View (Visualização de dados)
+
+#### Cria view
+
+CREATE VIEW nome_da_view as
+SELECT campo1, campo2
+FROM nome_da_tabela
+WHERE campo1 = valor;
+
+#### Deleta View
+
+DROP VIEW nome_da_view;
+
+- Utilizada para otimizar a visualização ("atalho" para um select) de uma tabela que precisa ser consultada frequentemente.
+- Evita a reconstrução de uma consulta a cada necessidade de utilização
+- Não é possivel fazer atualização ou exclusão em uma view que reflita na tabela original (funciona apenas para visualização)
+- É possível criar restrições com o WHERE
+Exemplo: 
+SELECT *
+FROM livro_e_editora
+WHERE nome like "Z%";
+- É possível criar uma view a partir de uma view já existente
+- É possível fazer joins entre views
 
 ## Comandos sqlite
 - sqlite3 nome_do_banco.sqlite - Cria banco de dados
