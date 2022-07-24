@@ -164,6 +164,20 @@ DROP INDEX idx_nome;
 - Ao incluir e excluir dados, o índice precisa ser atualizado
 - Geralmente criado pelo DBA
 
+### Cláusula DISTINCT (Valores únicos)
+- Evita que a consulta retorne com valores duplicados
+
+SELECT DISTINCT nome_campo
+FROM nome_tabela;
+
+#### Limit
+- Limita a quantidade de resgistros retornados em um SELECT
+
+Exemplo: <br> Quais os dois livros mais caros da tabela? <br>
+SELECT * 
+FROM livro
+ORDER BY precovenda DESC
+limit 2;
 
 ## Comandos sqlite
 - sqlite3 nome_do_banco.sqlite - Cria banco de dados
