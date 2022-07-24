@@ -1,0 +1,19 @@
+--Transações
+
+begin transaction;
+insert into autor(id, nome) 
+values (7, "Tiago");
+rollback;
+
+begin transaction;
+insert into autor(id, nome) 
+values (8, "Tiago");
+commit;
+
+begin transaction;
+delete from autor
+where id = 8;
+commit;
+rollback;
+
+select * from autor;
