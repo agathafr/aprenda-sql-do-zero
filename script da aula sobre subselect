@@ -1,0 +1,31 @@
+select * 
+from livro;
+
+select *
+from autor;
+
+-- Exiba todos os livros do autor Dan Brown utilizando join
+
+select l.titulo
+from livro l, autor a
+WHERE a.id = l.autor_id
+AND a.nome = "Dan Brown";
+
+-- Utilizando subselect
+
+select l.titulo
+from livro l
+where l.autor_id = (
+    select id
+    from autor
+    where nome = "Dan Brown"
+);
+
+-- Exclua todos os livros do autor "Graciliano Ramos"
+
+delete from livro
+where id = (
+    select id
+    from autor
+    where nome = "Graciliano Ramos"
+);
