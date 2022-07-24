@@ -1,0 +1,31 @@
+-- Joins
+
+-- Vendo as tabelas
+select * from livro;
+select * from estilo;
+
+-- Tradicional INNER JOIN
+
+select l.titulo, e.nome
+from livro l, estilo e
+where e.id = l.estilo_id; -- Mostra apenas livros que tenham um estilo cadastrado
+
+-- Outra grafia para INNER JOIN
+select titulo, nome
+from estilo INNER JOIN livro
+ON estilo.id = livro.estilo_id;
+
+-- INNER JOIN = Não mostra a linha que contem "null" em algum campo
+
+--------------------------------------------------------------------------------------------------------------
+
+-- OUTER JOIN
+select titulo, nome
+from estilo LEFT OUTER JOIN livro
+ON estilo.id = livro.estilo_id; -- Mostra estilos ainda que não tenhm livros cadastrados
+
+select titulo, nome
+from livro LEFT OUTER JOIN estilo
+ON estilo.id = livro.estilo_id; -- Mostra livros sem um estilo cadastrado
+
+-- LEFT OUTER JOIN = Mostra a linha da tabela à esquerda que contém "null" em algum campo
