@@ -274,8 +274,8 @@ Remove espaços do ínicio e do fim de uma string, do fim e do ínicio (reespect
 - typeoff
 Retorna o tipo de dado
 
-- date('now')
+- datetime();
 Mostra a data atual
 
-- sqlite_version
+- select sqlite_version();
 Mostra a versão do sqlite
