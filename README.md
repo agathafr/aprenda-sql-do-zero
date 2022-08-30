@@ -44,8 +44,8 @@ Aprenda e domine a linguagem padrão para trabalho com Banco de Dados! Curso TOT
 - DELETE from nome_da_tabela WHERE algum_campo = dado_de_algum_registro;
 
 ### Atualiza 
-- UPDATE nome_da_tabela
-SET campo_a_ser_atualizado = novo_valor_do_registro
+- UPDATE nome_da_tabela <br>
+SET campo_a_ser_atualizado = novo_valor_do_registro <br>
 WHERE campo_que_guarda_o_valor_que_identifica_o_registro_a_ser_atualizado_unicamente = valor_que_identifica_o_campo_exclusivamente
 
 ## Ligações
