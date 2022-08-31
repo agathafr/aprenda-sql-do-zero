@@ -41,7 +41,8 @@ Aprenda e domine a linguagem padrão para trabalho com Banco de Dados! Curso TOT
 - SELECT * FROM nome_da_tabela ORDER BY coluna_a_ser_ordenada DESC;
 
 ### Exclui 
-- DELETE from nome_da_tabela WHERE algum_campo = dado_de_algum_registro;
+- DELETE from nome_da_tabela <br> 
+WHERE algum_campo = dado_de_algum_registro;
 
 ### Atualiza 
 - UPDATE nome_da_tabela <br>
