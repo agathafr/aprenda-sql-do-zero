@@ -24,7 +24,7 @@ Aprenda e domine a linguagem padrão para trabalho com Banco de Dados! Curso TOT
 ## Comandos para manipulação de dados em tabela (DML)
 
 ### Insere 
-- INSERT INTO nome_da_tabela (campo(s)_que_receberão_dados) VALUES (valores_digitados_na_ordem_das_colunas_anteriores);
+- INSERT INTO nome_da_tabela (campo(s)_que_receberão_dados) <br> VALUES (valores_digitados_na_ordem_das_colunas_anteriores);
 
 ### Exibe 
 - SELECT * (todos_campos) FROM nome_da_tabela; 
