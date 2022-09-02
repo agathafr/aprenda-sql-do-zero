@@ -18,7 +18,8 @@ Aprenda e domine a linguagem padrão para trabalho com Banco de Dados! Curso TOT
 ### Deleta tabela
 - DROP TABLE nome_da_tabela; - Deleta tabela
 ### Altera tabela
-- ALTER TABLE nome_da_tabela rename to novo_nome_da_tabela; - Altera o nome da tabela 
+- ALTER TABLE nome_da_tabela <br> 
+RENAME TO novo_nome_da_tabela; - Altera o nome da tabela 
 - ALTER TABLE nome_da_tabela add nome_da_coluna tipo_de_dados; - Inclui uma coluna numa tabela já anteriormente criada
 
 ## Comandos para manipulação de dados em tabela (DML)
