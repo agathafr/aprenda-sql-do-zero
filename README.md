@@ -28,7 +28,7 @@ RENAME TO novo_nome_da_tabela; - Altera o nome da tabela
 - INSERT INTO nome_da_tabela (campo(s)_que_receberão_dados) <br> VALUES (valores_digitados_na_ordem_das_colunas_anteriores);
 
 ### Exibe 
-- SELECT * (todos_campos) FROM nome_da_tabela; 
+- SELECT * (todos_campos) <br> FROM nome_da_tabela; 
 - SELECT nome(s)_do(s)_campo(s) FROM nome_da_tabela;
 
 #### Com restrições:
