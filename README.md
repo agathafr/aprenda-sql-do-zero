@@ -14,7 +14,9 @@ Aprenda e domine a linguagem padrão para trabalho com Banco de Dados! Curso TOT
 ## Comandos para definição de estrutura em tabela (DDL)
 
 ### Cria tabela
-- CREATE TABLE nome_da_tabela (campo tipo_de_dados); - Cria tabela
+```sql
+CREATE TABLE nome_da_tabela (campo tipo_de_dados); 
+```
 ### Deleta tabela
 - DROP TABLE nome_da_tabela; - Deleta tabela
 ### Altera tabela
