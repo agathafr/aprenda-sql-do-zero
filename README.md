@@ -18,7 +18,9 @@ Aprenda e domine a linguagem padrão para trabalho com Banco de Dados! Curso TOT
 CREATE TABLE nome_da_tabela (campo tipo_de_dados); 
 ```
 ### Deleta tabela
+```sql
 - DROP TABLE nome_da_tabela; - Deleta tabela
+```
 ### Altera tabela
 - ALTER TABLE nome_da_tabela <br> 
 RENAME TO novo_nome_da_tabela; - Altera o nome da tabela 
