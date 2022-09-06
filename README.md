@@ -19,7 +19,7 @@ CREATE TABLE nome_da_tabela (campo tipo_de_dados);
 ```
 ### Deleta tabela
 ```sql
-- DROP TABLE nome_da_tabela; - Deleta tabela
+DROP TABLE nome_da_tabela;
 ```
 ### Altera tabela
 - ALTER TABLE nome_da_tabela <br> 
