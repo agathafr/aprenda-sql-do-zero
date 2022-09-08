@@ -14,21 +14,29 @@ Aprenda e domine a linguagem padrão para trabalho com Banco de Dados! Curso TOT
 ## Comandos para definição de estrutura em tabela (DDL)
 
 ### Cria tabela
-- CREATE TABLE nome_da_tabela (campo tipo_de_dados); - Cria tabela
+```sql
+CREATE TABLE nome_da_tabela (campo tipo_de_dados); 
+```
 ### Deleta tabela
-- DROP TABLE nome_da_tabela; - Deleta tabela
+```sql
+DROP TABLE nome_da_tabela;
+```
 ### Altera tabela
-- ALTER TABLE nome_da_tabela rename to novo_nome_da_tabela; - Altera o nome da tabela 
+- Altera o nome da tabela 
+```sql
+ALTER TABLE nome_da_tabela
+RENAME TO novo_nome_da_tabela; 
+```
 - ALTER TABLE nome_da_tabela add nome_da_coluna tipo_de_dados; - Inclui uma coluna numa tabela já anteriormente criada
 
 ## Comandos para manipulação de dados em tabela (DML)
 
 ### Insere 
-- INSERT INTO nome_da_tabela (campo(s)_que_receberão_dados) VALUES (valores_digitados_na_ordem_das_colunas_anteriores);
+- INSERT INTO nome_da_tabela (campo(s)_que_receberão_dados) <br> VALUES (valores_digitados_na_ordem_das_colunas_anteriores);
 
 ### Exibe 
-- SELECT * (todos_campos) FROM nome_da_tabela; 
-- SELECT nome(s)_do(s)_campo(s) FROM nome_da_tabela;
+- SELECT * (todos_campos) <br> FROM nome_da_tabela; 
+- SELECT nome(s)_do(s)_campo(s) <br> FROM nome_da_tabela;
 
 #### Com restrições:
 - SELECT * (todos os campos (não todos os registros)) FROM nome_da_tabela WHERE algum_campo = dado_de_algum_registro;
@@ -41,11 +49,12 @@ Aprenda e domine a linguagem padrão para trabalho com Banco de Dados! Curso TOT
 - SELECT * FROM nome_da_tabela ORDER BY coluna_a_ser_ordenada DESC;
 
 ### Exclui 
-- DELETE from nome_da_tabela WHERE algum_campo = dado_de_algum_registro;
+- DELETE from nome_da_tabela <br> 
+WHERE algum_campo = dado_de_algum_registro;
 
 ### Atualiza 
-- UPDATE nome_da_tabela
-SET campo_a_ser_atualizado = novo_valor_do_registro
+- UPDATE nome_da_tabela <br>
+SET campo_a_ser_atualizado = novo_valor_do_registro <br>
 WHERE campo_que_guarda_o_valor_que_identifica_o_registro_a_ser_atualizado_unicamente = valor_que_identifica_o_campo_exclusivamente
 
 ## Ligações
