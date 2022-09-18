@@ -32,7 +32,11 @@ RENAME TO novo_nome_da_tabela;
 ## Comandos para manipulação de dados em tabela (DML)
 
 ### Insere 
-- INSERT INTO nome_da_tabela (campo(s)_que_receberão_dados) <br> VALUES (valores_digitados_na_ordem_das_colunas_anteriores);
+
+```sql 
+INSERT INTO nome_da_tabela (campo(s)_que_receberão_dados) 
+VALUES (valores_digitados_na_ordem_das_colunas_anteriores);
+```
 
 ### Exibe 
 - SELECT * (todos_campos) <br> FROM nome_da_tabela; 
