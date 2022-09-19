@@ -23,11 +23,18 @@ DROP TABLE nome_da_tabela;
 ```
 ### Altera tabela
 - Altera o nome da tabela 
+
 ```sql
 ALTER TABLE nome_da_tabela
 RENAME TO novo_nome_da_tabela; 
 ```
-- ALTER TABLE nome_da_tabela add nome_da_coluna tipo_de_dados; - Inclui uma coluna numa tabela já anteriormente criada
+
+- Inclui uma coluna numa tabela já anteriormente criada
+
+```sql
+ALTER TABLE nome_da_tabela 
+ADD nome_da_coluna tipo_de_dados; 
+```
 
 ## Comandos para manipulação de dados em tabela (DML)
 
