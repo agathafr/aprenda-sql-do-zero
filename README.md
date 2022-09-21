@@ -50,7 +50,11 @@ VALUES (valores_digitados_na_ordem_das_colunas_anteriores);
 SELECT * (todos_campos)
 FROM nome_da_tabela; 
 ```
-- SELECT nome(s)_do(s)_campo(s) FROM nome_da_tabela;
+
+```sql
+SELECT nome(s)_do(s)_campo(s) 
+FROM nome_da_tabela;
+```
 
 #### Com restrições:
 - SELECT * (todos os campos (não todos os registros)) FROM nome_da_tabela WHERE algum_campo = dado_de_algum_registro;
