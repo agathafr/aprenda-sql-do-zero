@@ -57,7 +57,10 @@ FROM nome_da_tabela;
 ```
 
 #### Com restrições:
-- SELECT * (todos os campos (não todos os registros)) FROM nome_da_tabela WHERE algum_campo = dado_de_algum_registro;
+```sql
+SELECT * (todos os campos (não todos os registros)) 
+FROM nome_da_tabela WHERE algum_campo = dado_de_algum_registro;
+```
 - SELECT * FROM nome_da_tabela WHERE nome like "M%"; % desconsidera os caracteres após ele e exibe todos os registros que possuem a restrição especificada 
 - SELECT * FROM nome_da_tabela WHERE algum_campo = 50 or algum_campo = 4 or algum_campo = 7; 
 - SELECT * FROM nome_da_tabela WHERE algum_campo in (50, 2, 7, 900, 4); retorna os registros que possuem os dados dentro do intervalo especificado entre ()
