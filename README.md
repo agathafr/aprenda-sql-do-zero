@@ -71,7 +71,13 @@ WHERE nome like "M%";
 SELECT * FROM nome_da_tabela 
 WHERE algum_campo = 50 or algum_campo = 4 or algum_campo = 7;
 ```
-- SELECT * FROM nome_da_tabela WHERE algum_campo in (50, 2, 7, 900, 4); retorna os registros que possuem os dados dentro do intervalo especificado entre ()
+
+- Retorna os registros que possuem os dados dentro do intervalo especificado entre ()
+```sql
+SELECT * 
+FROM nome_da_tabela 
+WHERE algum_campo in (50, 2, 7, 900, 4);
+``` 
 
 #### Com ordenação:
 - SELECT * FROM nome_da_tabela ORDER BY coluna_a_ser_ordenada ASC;
