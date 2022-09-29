@@ -80,7 +80,11 @@ WHERE algum_campo in (50, 2, 7, 900, 4);
 ``` 
 
 #### Com ordenação:
-- SELECT * FROM nome_da_tabela ORDER BY coluna_a_ser_ordenada ASC;
+```sql
+SELECT * 
+FROM nome_da_tabela 
+ORDER BY coluna_a_ser_ordenada ASC;
+```
 - SELECT * FROM nome_da_tabela ORDER BY coluna_a_ser_ordenada DESC;
 
 ### Exclui 
