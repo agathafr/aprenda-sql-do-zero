@@ -85,7 +85,11 @@ SELECT *
 FROM nome_da_tabela 
 ORDER BY coluna_a_ser_ordenada ASC;
 ```
-- SELECT * FROM nome_da_tabela ORDER BY coluna_a_ser_ordenada DESC;
+```sql
+SELECT * 
+FROM nome_da_tabela 
+ORDER BY coluna_a_ser_ordenada DESC;
+```
 
 ### Exclui 
 - DELETE from nome_da_tabela <br> 
