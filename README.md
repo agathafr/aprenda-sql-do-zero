@@ -92,8 +92,10 @@ ORDER BY coluna_a_ser_ordenada DESC;
 ```
 
 ### Exclui 
-- DELETE from nome_da_tabela <br> 
+```sql
+DELETE from nome_da_tabela  
 WHERE algum_campo = dado_de_algum_registro;
+```
 
 ### Atualiza 
 - UPDATE nome_da_tabela <br>
