@@ -122,10 +122,11 @@ Ligação de um campo (código do autor) de uma tabela (livros) à chave primari
 INNER JOIN = LIGAÇÃO INTERNA
 Resultado mostra linhas que satisfaçam a condição nas duas tabelas (não trouxe campos nulos)
 
-- SELECT * 
+```sql
+SELECT * 
 FROM nome_da_tabela_que_contem_a_primeira_info apelido_tabela, nome_da_tabela_que_contem_a_segunda_info apelido_tabela
 WHERE apelido_tabela.campo_chave_primaria = apelido_tabela.campo_chave_estrangeira;
-
+```
 #### Entre duas tabelas
 SELECT l.titulo, a.nome
 FROM autor a, livro l
