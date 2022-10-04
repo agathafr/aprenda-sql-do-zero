@@ -128,9 +128,11 @@ FROM nome_da_tabela_que_contem_a_primeira_info apelido_tabela, nome_da_tabela_qu
 WHERE apelido_tabela.campo_chave_primaria = apelido_tabela.campo_chave_estrangeira;
 ```
 #### Entre duas tabelas
+```sql
 SELECT l.titulo, a.nome
 FROM autor a, livro l
 WHERE a.id = l.autor_id;
+```
 
 SELECT l.titulo, e.nome
 FROM livro l, editora e
