@@ -133,11 +133,11 @@ SELECT l.titulo, a.nome
 FROM autor a, livro l
 WHERE a.id = l.autor_id;
 ```
-
+```sql
 SELECT l.titulo, e.nome
 FROM livro l, editora e
 WHERE e.id = l.editora_id;
-
+```
 #### Entre três tabelas
 
 SELECT l.titulo, a.nome, e.nome
