@@ -139,11 +139,12 @@ FROM livro l, editora e
 WHERE e.id = l.editora_id;
 ```
 #### Entre três tabelas
-
+```sql
 SELECT l.titulo, a.nome, e.nome
 FROM livro l, autor a, editora e
 WHERE a.id = l.autor_id
 AND e.id = l.editora_id;
+```
 
 ### Convenções/Regras para o relacionamento entre tabelas
 - Nome da tabela deverá ser escrito no singular (livro, autor, estilo)
