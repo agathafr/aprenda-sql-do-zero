@@ -167,9 +167,10 @@ END;
 ### Função de agregação
 
 - Count - contagem de registros
+```sql
 SELECT count (*) Total
 FROM nome_da_tabela;
-
+```
 - Avg - média aritmética
 SELECT avg(nome_do_campo) Media
 FROM nome_da_tabela;
