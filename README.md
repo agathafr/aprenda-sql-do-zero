@@ -172,9 +172,10 @@ SELECT count (*) Total
 FROM nome_da_tabela;
 ```
 - Avg - média aritmética
+```sql
 SELECT avg(nome_do_campo) Media
 FROM nome_da_tabela;
-
+```
 - Max - maior valor
 select max(nome_da_coluna)
 FROM nome_da_tabela;
