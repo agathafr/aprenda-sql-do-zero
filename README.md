@@ -177,9 +177,10 @@ SELECT avg(nome_do_campo) Media
 FROM nome_da_tabela;
 ```
 - Max - maior valor
+```sql
 select max(nome_da_coluna)
 FROM nome_da_tabela;
-
+```
 - Min - menor valor
 SELECT min(nome_da_coluna)
 FROM nome_da_tabela;
