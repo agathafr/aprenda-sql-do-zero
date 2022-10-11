@@ -182,9 +182,10 @@ select max(nome_da_coluna)
 FROM nome_da_tabela;
 ```
 - Min - menor valor
+```sql
 SELECT min(nome_da_coluna)
 FROM nome_da_tabela;
-
+```
 ### Cláusulas GROUP BY e HAVING
 
 - GROUP BY
