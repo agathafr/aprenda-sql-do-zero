@@ -192,10 +192,11 @@ FROM nome_da_tabela;
 Agrupa os registros de acordo com um critério
 
 Exemplo: 
+```sql
 SELECT count(*)
 FROM editora
 GROUP BY estado;
-
+```
 Retorna a quantidade de editores por estado
 
 - HAVING
