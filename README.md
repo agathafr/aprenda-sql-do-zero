@@ -201,12 +201,12 @@ Retorna a quantidade de editores por estado
 
 - HAVING
 Restringe o resultado da consulta de acordo com o critério definido 
-
+```sql
 SELECT estado, count(*) total
 FROM editora
 GROUP BY estado
 HAVING count(*) < 30;
-
+```
 ### View (Visualização de dados)
 
 #### Cria view
