@@ -210,12 +210,12 @@ HAVING count(*) < 30;
 ### View (Visualização de dados)
 
 #### Cria view
-
+```sql
 CREATE VIEW nome_da_view as
 SELECT campo1, campo2
 FROM nome_da_tabela
 WHERE campo1 = valor;
-
+```
 #### Deleta View
 
 DROP VIEW nome_da_view;
