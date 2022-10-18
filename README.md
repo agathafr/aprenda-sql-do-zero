@@ -217,8 +217,9 @@ FROM nome_da_tabela
 WHERE campo1 = valor;
 ```
 #### Deleta View
-
+```sql
 DROP VIEW nome_da_view;
+```
 
 - Utilizada para otimizar a visualização ("atalho" para um select) de uma tabela que precisa ser consultada frequentemente.
 - Evita a reconstrução de uma consulta a cada necessidade de utilização
