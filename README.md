@@ -226,9 +226,11 @@ DROP VIEW nome_da_view;
 - Não é possivel fazer atualização ou exclusão em uma view que reflita na tabela original (funciona apenas para visualização)
 - É possível criar restrições com o WHERE
 Exemplo: 
+```sql
 SELECT *
 FROM livro_e_editora
 WHERE nome like "Z%";
+```
 - É possível criar uma view a partir de uma view já existente
 - É possível fazer joins entre views
 
