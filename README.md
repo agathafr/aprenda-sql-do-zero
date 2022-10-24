@@ -237,9 +237,9 @@ WHERE nome like "Z%";
 ### Index (Índice)
 
 #### Cria index
-
+```sql
 CREATE INDEX idx_nome ON nome_tabela (nome_campo_muito_utilizado_em_consultas);
-
+```
 #### Deleta index
 
 DROP INDEX idx_nome;
