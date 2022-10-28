@@ -242,8 +242,9 @@ CREATE INDEX idx_nome ON nome_tabela (nome_campo_muito_utilizado_em_consultas);
 ```
 #### Deleta index
 
+```sql
 DROP INDEX idx_nome;
-
+```
 - Acelera buscas em uma tabela 
 - Ao incluir e excluir dados, o índice precisa ser atualizado
 - Geralmente criado pelo DBA
