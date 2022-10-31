@@ -252,9 +252,10 @@ DROP INDEX idx_nome;
 ### Cláusula DISTINCT (Valores únicos)
 - Evita que a consulta retorne com valores duplicados
 
+```sql
 SELECT DISTINCT nome_campo
 FROM nome_tabela;
-
+``` 
 #### Limit
 - Limita a quantidade de resgistros retornados em um SELECT
 
