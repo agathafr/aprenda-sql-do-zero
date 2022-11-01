@@ -260,11 +260,12 @@ FROM nome_tabela;
 - Limita a quantidade de resgistros retornados em um SELECT
 
 Exemplo: <br> Quais os dois livros mais caros da tabela? <br>
+```sql
 SELECT * 
 FROM livro
 ORDER BY precovenda DESC
 limit 2;
-
+```
 ### Subselects
 - É um Select dentro de outro Select
 - Usado quando há dependência de dados entre consultas distintas 
