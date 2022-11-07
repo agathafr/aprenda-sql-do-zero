@@ -275,10 +275,12 @@ Exemplo:
 <br>
 - Exibe todos os livros do autor Dan Brown utilizando join
 
+```sql
 select l.titulo
 from livro l, autor a
 WHERE a.id = l.autor_id
 AND a.nome = "Dan Brown";
+```
 
 - Utilizando subselect
 
