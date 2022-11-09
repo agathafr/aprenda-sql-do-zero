@@ -283,7 +283,7 @@ AND a.nome = "Dan Brown";
 ```
 
 - Utilizando subselect
-
+```sql
 select l.titulo 
 from livro l
 where l.autor_id = (
@@ -291,7 +291,7 @@ where l.autor_id = (
     from autor
     where nome = "Dan Brown"
 );
-
+```
 - Exclui todos os livros do autor "Graciliano Ramos"
 
 delete from livro
