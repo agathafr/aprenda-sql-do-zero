@@ -293,14 +293,14 @@ where l.autor_id = (
 );
 ```
 - Exclui todos os livros do autor "Graciliano Ramos"
-
+```sql
 delete from livro
 where id = (
     select id
     from autor
     where nome = "Graciliano Ramos"
 );
-
+```
 ### Transações do banco
 Conjunto de operações que podem ser confirmadas ou descartadas (Ou todas as operações são realizadas ou nenhuma é)
 
