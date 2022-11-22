@@ -303,11 +303,13 @@ where id = (
 ```
 ### Transações do banco
 Conjunto de operações que podem ser confirmadas ou descartadas (Ou todas as operações são realizadas ou nenhuma é)
-
+```sql
 begin transaction;
-<br> insert into nome_tabela(campos) values (valores);
-<br> rollback; ou
-<br> commit;
+INSERT INTO nome_tabela(campos) 
+VALUES (valores);
+rollback; ou
+commit;
+```
 
 ## Comandos sqlite
 - sqlite3 nome_do_banco.sqlite - Cria banco de dados
