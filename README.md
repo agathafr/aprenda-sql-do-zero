@@ -276,8 +276,8 @@ Exemplo:
 - Exibe todos os livros do autor Dan Brown utilizando join
 
 ```sql
-select l.titulo
-from livro l, autor a
+SELECT l.titulo
+FROM livro l, autor a
 WHERE a.id = l.autor_id
 AND a.nome = "Dan Brown";
 ```
