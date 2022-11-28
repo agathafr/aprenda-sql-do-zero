@@ -284,7 +284,7 @@ AND a.nome = "Dan Brown";
 
 - Utilizando subselect
 ```sql
-select l.titulo 
+SELECT l.titulo 
 from livro l
 where l.autor_id = (
     select id
