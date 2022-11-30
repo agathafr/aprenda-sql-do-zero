@@ -285,7 +285,7 @@ AND a.nome = "Dan Brown";
 - Utilizando subselect
 ```sql
 SELECT l.titulo 
-from livro l
+FROM livro l
 where l.autor_id = (
     select id
     from autor
