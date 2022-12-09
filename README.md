@@ -294,7 +294,7 @@ where l.autor_id = (
 ```
 - Exclui todos os livros do autor "Graciliano Ramos"
 ```sql
-delete from livro
+DELETE from livro
 where id = (
     select id
     from autor
